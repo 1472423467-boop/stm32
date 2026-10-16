@@ -25,20 +25,20 @@ int main(void)
 		
 		/*方法1：GPIO_ResetBits设置低电平，GPIO_SetBits设置高电平*/
 		GPIO_ResetBits(GPIOA, GPIO_Pin_0);					//将PA0引脚设置为低电平
-		Delay_ms(500);										//延时500ms
+		Delay_ms(400);										//延时400ms
 		GPIO_SetBits(GPIOA, GPIO_Pin_0);					//将PA0引脚设置为高电平
-		Delay_ms(500);										//延时500ms
+		Delay_ms(400);										//延时400ms
 		
 		/*方法2：GPIO_WriteBit设置低/高电平，由Bit_RESET/Bit_SET指定*/
 		GPIO_WriteBit(GPIOA, GPIO_Pin_0, Bit_RESET);		//将PA0引脚设置为低电平
-		Delay_ms(500);										//延时500ms
+		Delay_ms(400);										//延时400ms
 		GPIO_WriteBit(GPIOA, GPIO_Pin_0, Bit_SET);			//将PA0引脚设置为高电平
-		Delay_ms(500);										//延时500ms
+		Delay_ms(400);										//延时500ms
 		
 		/*方法3：GPIO_WriteBit设置低/高电平，由数据0/1指定，数据需要强转为BitAction类型*/
 		GPIO_WriteBit(GPIOA, GPIO_Pin_0, (BitAction)0);		//将PA0引脚设置为低电平
-		Delay_ms(500);										//延时500ms
+		Delay_ms(400);										//延时500ms
 		GPIO_WriteBit(GPIOA, GPIO_Pin_0, (BitAction)1);		//将PA0引脚设置为高电平
-		Delay_ms(500);										//延时500ms
+		Delay_ms(400);										//延时500ms
 	}
 }
